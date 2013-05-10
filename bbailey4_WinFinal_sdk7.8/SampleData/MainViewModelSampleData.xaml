@@ -1,0 +1,12 @@
+﻿<local:MainViewModel 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:bbailey4_WinFinal_sdk7._8">
+    
+    <local:MainViewModel.Items>
+        <local:ItemViewModel PrimaryDesc="PUBLIC PEACE VIOLATION" LocationDesc="RESIDENCE PORCH/HALLWAY" Beat="612" Arrest="No" Domestic="No" Ward="17" iucr="041A" Fbi_Cd="04B" CaseNo="HW251629" DateOf="2013-04-28T17:20:00" SecondaryDesc="AGGRAVATED: HANDGUN" Block="017XX N SPRINGFIELD AVE" Latitude="41.658987962090826" Longitude="-87.54969181443833" DistanceToMyLocation="1004.029394823" />
+        <local:ItemViewModel PrimaryDesc="THEFT" Block="047XX S PULASKI RD" />
+        <local:ItemViewModel PrimaryDesc="OFFENSE INVOLVING CHILDREN" Block="048XX N SPRINGFIELD AVE" />
+    </local:MainViewModel.Items>
+    
+</local:MainViewModel>

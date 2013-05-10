@@ -1,0 +1,105 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="bbailey4_WinFinal_sdk7._8.DetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait" 
+    shell:SystemTray.IsVisible="True">
+
+    <!--Data context is set to sample data above and first item in sample data collection below and LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent" d:DataContext="{Binding Items[0]}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,15">
+            <TextBlock x:Name="PageTitle" Text="bbailey4_WinFinal" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="ListTitle" Text="Report Detail" Margin="0,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel contains details text. Place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer Name="scrollViewer1" VerticalContentAlignment="Top" VerticalAlignment="Top">
+                <StackPanel Name="stackPanel1">
+                    <TextBlock Name="primaryDescTB" Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding PrimaryDesc}" TextWrapping="NoWrap" FontSize="30" FontWeight="Bold" Margin="0,0,0,5" Foreground="Red" />
+                    <TextBlock Name="textBlock3" Text="{Binding SecondaryDesc}" FontWeight="Bold" Margin="0,0,0,10" FontSize="22" />
+                    <StackPanel Name="stackPanel7" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock7" Text="Case Number:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="caseNoTB" Text="{Binding CaseNo}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel5" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock5" Text="Report Date:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="dateTB" Text="{Binding DateOf}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel6" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock6" Text="Block:  " FontWeight="Bold" />
+                        <TextBlock Name="blockTB" Style="{StaticResource PhoneTextNormalStyle}" Text="{Binding Block}" TextWrapping="Wrap" Margin="0" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel8" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock8" Text="Beat:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="beatTB" Text="{Binding Beat}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel9" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock9" Text="Ward:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="wardTB" Text="{Binding Ward}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel10" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock10" Text="IUCR:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="iucrTB" Text="{Binding iucr}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel11" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock11" Text="FBI CD:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="fbiCdTB" Text="{Binding Fbi_Cd}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel12" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock12" Text="Arrest:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="arrestTB" Text="{Binding Arrest}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel13" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock13" Text="Domestic:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="domesticTB" Text="{Binding Domestic}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel14" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock14" Text="Location Description:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="locationDescTB" Text="{Binding LocationDesc}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel2" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock4" Text="Latitude:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="latitudeTB" Text="{Binding Latitude}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel3" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock1" Text="Longitude:  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="longitudeTB" Text="{Binding Longitude}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                    <StackPanel Name="stackPanel4" Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Height="30" Name="textBlock2" Text="Distance From My Locaation (meters):  " FontWeight="Bold" />
+                        <TextBlock Height="30" Name="distanceTB" Text="{Binding Path=DistanceToMyLocation, StringFormat=\{0:F\}}" Foreground="#FFAAAAAA" />
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
